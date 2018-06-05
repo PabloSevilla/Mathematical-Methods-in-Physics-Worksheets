@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{bm}
+\usepackage[margin=1.0in]{geometry}
+
+\title{Physics 116B \\ Mathematical Methods in Physics\\ Small Group Tutoring}
+\author{Pablo Sevilla}
+\date{Week 5 - April 23/25 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+\maketitle
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{lss}
+\end{figure}
+\section{Preliminary Questions}
+ \begin{itemize}
+  \item Bernoulli's differential Equation is very useful as it has various practical applications in real life, such as calculating the pressure of water coming out of a fire hose nozzle. This equation is often written as 
+  \begin{equation}
+      y'+P(x)y=Q(x)y^n
+  \end{equation} 
+  
+  Comment on the order and linearity of this equation. Can this equation be solved using the general solution for the linear first order differential equation?
+  \item The expression $P(x,y)dx+Q(x,y)dy$ is an exact differential of a function $F(x,y)$ under what condition? 
+\begin{enumerate}[label=(\alph*)]
+\centering
+\item $\frac{dP}{dx}=\frac{dQ}{dy}$
+\item $\frac{dP}{dy}=\frac{dQ}{dx}$
+\item $\frac{\partial P}{\partial x}=\frac{\partial Q}{\partial y}$
+\item $\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$
+\end{enumerate}
+If the appropiate condition holds, what is the relationship between $P(x,y)$ and $F(x,y)$? And between $Q(x,y)$ and $F(x,y)$?
+\item Second-order linear equations are found in many areas of Physics. They can be written as:
+\begin{equation}
+    a_2\frac{d^2y}{dx^2}+a_1\frac{dy}{dx}+a_0y=0
+\end{equation}
+State the constants $a_1$. $a_2$ and $a_0$ for Newton's Second Law and the rate of change of voltage in an RLC circuit.
+\item Write down the differential equation $y''+5y'+4y=0$ in terms of the differential operator $D$. Show that such expression can be written in terms of the auxiliary equations, $(D+a)(D+b)y=0$.
+ \end{itemize}
+  
+  \section{Group Problems}
+  Work together as a group for the following problems. Once solved, prepare a presentation to explain the problems in an organized manner.
+  \subsection{Problem 1}
+  Solve the following differential equation:
+  \begin{equation}
+      yy'-2y^2\cot x=\sin x \cos x
+  \end{equation}
+  Hint: Make this equation linear by the use of an appropriate change of variables (substitution).
+  \subsection{Problem 2}
+  Riccati equations refer to a first order differential equation equal to a polynomial of second degree with x-dependent coefficients. Mathematically speaking,
+  
+  \begin{equation}
+      y'=f(x)y^2+g(x)y+h(x)
+  \end{equation}
+  
+  A peculiar property of this general equation is that if we know one particular solution, $y_p$, a substitution $y=y_p+\frac{1}{z}$ can be used to obtain a linear first order equation for $z$, which can be then solved to obtain a subset of general solutions for $y$ with one arbitrary constant. Using this method, check that the given particular solution $Y_p$ works and then solve for the (almost) general subset of solutions.
+  \begin{enumerate}[label=(\alph*)]
+
+\item $y'=xy^2-\frac{2}{x}y-\frac{1}{x^3}$, where $y_p=\frac{1}{x^2}$
+\item $y'=\frac{2}{x}y^2+\frac{1}{x}y-2x$
+where $y_p=x$
+
+\end{enumerate}
+
+  \subsection{Problem 3}
+  Second order differential equations can be written in terms of auxiliary equations $(D-a)$ and $(D-b)$, such that $(D-a)(D-b)y=0$. The general solutions of these equations are:
+ \begin{enumerate}
+     \item $y=c_1e^{ax}+c_2e^{bx}$ if $a\neq b$.
+     \item $y=(Ax+B)e^{ax}$ if $a=b$.
+     \item $y=e^{\alpha x}(Ae^{i\beta x}+Be^{-i\beta x})$ if the roots of are complex $(\alpha + \beta i)$.
+ \end{enumerate}
+ 
+ Use these general solutions to solve the following differential equations:
+ \begin{enumerate}[label=(\alph*)]
+\centering
+\item $(D^2-2D+1)y=0$
+\item $(D^2-5D+6)y=0$
+\item $(D^2-4D+13)y=0$
+\end{enumerate}
+
+\subsection{Problem 4}
+You now know how to deal with second-order differential equations that can be written in terms of auxiliary equations. The solutions for higher order equations is in fact very similar to this case. Show that the solution of the third-order equation:
+ \begin{equation}
+     (D-a)(D-b)(D-c)y=0
+ \end{equation}
+ 
+ can be written as $y=c_1e^{ax}+c_2e^{bx}+c_3e^{cx}$ if $a\neq b\neq c$. Obtain the solutions in the two other cases where $a=b\neq c$ and $a=b=c$ and use this to find general solution for the third-order differential equation $y'''-3y''-9y'-5y=0$.
+  
+\end{document}

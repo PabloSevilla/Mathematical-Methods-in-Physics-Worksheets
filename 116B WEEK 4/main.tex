@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{bm}
+\usepackage[margin=1.0in]{geometry}
+
+\title{Physics 116B \\ Mathematical Methods in Physics\\ Small Group Tutoring}
+\author{Pablo Sevilla}
+\date{Week 4 - April 23/25 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+\maketitle
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{lss}
+\end{figure}
+\section{Preliminary Questions}
+ \begin{itemize}
+  \item What is a differential equation, and when is it ordinary vs. partial? What is referred as the order of such equation? What constitutes as a solution to these equations?
+  \item State the order of such differential equations and provide context on their application to real problems.
+  \begin{equation}
+      \bm{F}=m\bm{a}
+  \end{equation} 
+  \begin{equation}
+      \frac{dQ}{dt}=kA\frac{dT}{dx}
+  \end{equation}
+  \begin{equation}
+      \frac{dV}{dt}=\frac{d}{dt}\Bigg(L\frac{dI}{dt}+RI+\frac{q}{c}\Bigg)
+  \end{equation}
+  
+  \item By inspection, find one solution for each of the differential equations $y''=-\cos{x}$ and $y''=-y$.
+  \item When are solutions of an $n$ order differential equation general? What information is required to obtain a particular solution from a general solution?
+  \item Find the distance which an object falls under gravity in $t$ seconds using the relationship $\frac{d^2x}{dt^2}=g$. By algebra manipulation, find a solution to such equation and state whether it is a general or a particular solution.
+  \item Separation of variables is one of the most effective methods to find solutions to differential equations. For the equations $xy'=y+1$ and $xy''=y'+1$, is it possible to use such method and why? If it is possible, do it.
+ \end{itemize}
+
+  
+  \clearpage
+  \section{Group Problems}
+  Work together as a group for the following problems. Once solved, prepare a presentation to explain the problems in an organized manner.
+  \subsection{Problem 1}
+  Find the position $x$ of a particle at time $t$ if its acceleration is $\frac{d^2x}{dt^2}=B\cos{wt}$.
+  
+  \subsection{Problem 2}
+  Find the distance which an object moves in time $t$ if it starts from rest and has an acceleration $\frac{d^2x}{dt^2}=-ge^{-kt}$.
+ 
+  \subsection{Problem 3}
+  Find the general solution to the following differential equation:
+  \begin{equation}
+      (yx^2-6y)dy=0
+  \end{equation}
+  
+  The solution passes through the point $(4,2)$. Use this information to collapse the general solution into the particular solution of this specific boundary condition.
+  
+  \subsection{Problem 4}
+  The growth of a bacteria population $\frac{dN}{dt}$ is proportional to the square root of the number of bacteria present at that time. If I start with a population of 10 bacteria, how much will this population have grown after 5 seconds? Take the constant of proportionality to be $2$.
+  
+  \subsection{Problem 5 ***CHALLENGING***}
+  Linear first order differential equations can be written in the form:
+  \begin{equation}
+      y'+P(x)y=Q(x)
+  \end{equation}
+  
+  Show that the general solution to this equation is:
+  
+  \begin{equation}
+  y=e^{-I}\Bigg(\int Q(x)e^{I}dx+y_o\Bigg)     
+  \end{equation}
+  
+  where $I=\int P(x)dx$.
+  
+  Hint: First consider the case where $Q(x)=0$ and obtain a solution for this case. For tidyness, remember that you can write $e^C=A$, where $C$ is the constant obtained after taking an indefinite integral. Once this specific solution is obtained, differentiate with respect to $x$ and see if you can relate your answer to the general case where $Q(x)\neq0$. 
+  
+  Use this property to find the general solutions to the following linear first order differential equations:
+  \centering
+  \begin{itemize}
+    \centering
+      \item $x^2y'+3xy=1$
+      \item $y'+y\cos{x}=\sin{2x}$
+      \item $dy+(y-e^x)dx=0$
+  \end{itemize}
+  
+\end{document}

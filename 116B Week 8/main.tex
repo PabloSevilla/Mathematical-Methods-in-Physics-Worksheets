@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{bm}
+\usepackage[margin=1.0in]{geometry}
+
+\title{Physics 116B \\ Mathematical Methods in Physics\\ Small Group Tutoring}
+\author{Pablo Sevilla}
+\date{Week 4 - April 23/25 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+\maketitle
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{lss}
+\end{figure}
+\section{Preliminary Questions}
+ \begin{itemize}
+  \item The Laplace transform is an incredibly useful tool for many areas of physics such as nuclear physics, complex impedance of a capacitor (PHYS 133) and describing the entropy of a thermodynamic system through the partition function (PHYS 112). This is an integral transform and it is defined by:
+  
+  \begin{equation}
+      L(f)=\int_{0}^{\infty}f(t)e^{-pt}dt=F(p)
+  \end{equation}
+  
+  Laplace transforms for common functions are often found in tables such as the one in page 469 in Boas. Check the value of L1 and L2 by explicitily evaluating the integral, where $f_{1}(t)=1$ and $f_{2}(t)=e^{-at}$.
+  \item One can also consider equations $F(p)$ and from there find its inverse Laplace transform $f(t)=L^{-1}\Big(F(p)\Big)$. Using the Laplace Transform table, find by inspection the inverse Laplace transform for the following cases:
+  
+  \begin{enumerate}
+      \item $f(t)=L^{-1}\Big(\frac{16}{p^2+16}\Big)$
+      \item $f(t)=L^{-1}\Big(\frac{p^2-9}{(p^2+9)^2}\Big)$
+      \item $f(t)=L^{-1}\Big(\frac{6}{(p+3)^4}\Big)$
+  \end{enumerate}
+    \item By expanding calculus to include complex numbers, calculations are made often easier, believe it or not. A complex number can be separated into imaginary and real parts. Complex functions can also be separated the same way using the following property:
+  
+ \begin{equation}
+     f(z)=f(x+iy)=u(x,y)+iv(x,y)
+ \end{equation}
+ 
+ Use that property to find the real and imaginary functions, $u(x,y)$ and $v(x,y)$ respectively, for the following functions:
+ 
+ \begin{enumerate}
+     \item $f(z)=z^2$
+     \item $f(z)=\frac{z^3}{z-1}$
+ \end{enumerate}
+  \item Explain what it is meant for a real equation $f(x)$ to be analytic. Can you extend this definition to the more general, complex functions case? Why or why not? Note that for a complex function to be analytic, it has to obey the Cauchy-Riemann conditions, and use this information to determine if the previous complex functions are analytic or not.
+  
+  \begin{equation}
+      \frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}
+  \end{equation}
+  
+  \begin{equation}
+      \frac{\partial v}{\partial x}=-\frac{\partial u}{\partial y}
+  \end{equation}
+ \end{itemize}
+ 
+  \section{Group Problems}
+  Work together as a group for the following problems. Once solved, prepare a presentation to explain the problems in an organized manner.
+  \subsection{Problem 1}
+  \begin{enumerate}[label=(\alph*)]
+\item Consider the following function $F(p)$ and find its corresponding inverse Laplace transforms. Use the table provided in page 469 of your book (specifically L6 and L18).
+  
+  \begin{itemize}
+      \item $\frac{1+p}{(p+2)^2}$
+  \end{itemize}
+  
+  \item
+  Use L29 and L11 to find the Laplace transform of $f(t)=te^{-at}\sin{bt}$.
+  \end{enumerate}
+  \subsection{Problem 2}
+  Solve the following differential equations using Laplace Transforms:
+  
+  \begin{itemize}
+      \item $y'-y=2e^{t}$
+      \item $y''+16y=8\cos{4t}$
+  \end{itemize}
+ 
+  \subsection{Problem 3}
+  Find the imaginary and real functions of the complex functions:
+  \begin{itemize}
+      \item$\frac{2z+3}{z+2}$ 
+      \item $\frac{2z+i}{iz-2}$
+      \end{itemize}
+  \subsection{Problem 4}
+  Use the Cauchy-Riemann conditions to determine if the following complex functions are analytic:
+  \begin{itemize}
+      \item $\frac{x-iy}{x^2+y^2}$
+      \item $y+ix$ and $x+iy$
+  \end{itemize}
+  
+\end{document}

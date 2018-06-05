@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{bm}
+\usepackage[margin=1.0in]{geometry}
+
+\title{Physics 116B \\ Mathematical Methods in Physics\\ Small Group Tutoring}
+\author{Pablo Sevilla}
+\date{Week 7 - May 14/16 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+\maketitle
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{lss}
+\end{figure}
+\section{Preliminary Questions}
+ \begin{itemize}
+  \item Differential equations of the form:
+  \begin{equation}
+      a_2\frac{d^2y}{dx^2}+a_1\frac{dy}{dx}+a_0y=0
+  \end{equation} 
+  are often used in physics to model free oscillations of many types of systems, such as a pendulum in a constant gravitational field. How would you modify this ordinary differential equation (ODE) to include an external force? In the pendulum case, think of adding a purely horizontal force in the $x$ direction.
+  \item Consider the following equation:
+  \begin{equation}
+      y''-4y'+3y=5
+  \end{equation} 
+  What is a particular solution $y_p$ to this ODE and what is the corresponding complimentary function $y_c$? The solutions of $y_c$ are related and can be used to construct the solutions of function $y$, but how? Also, will solutions obtained this way be general?
+  \item Sometimes, ODE's can have more than one term in the right hand side, such that:
+  \begin{equation}
+      (D^2+aD+b)y=f(x)+g(x)+h(x)+etc...
+  \end{equation} 
+  How can you solve such equations? What is the required principle called and under what conditions can it be used?
+ \end{itemize}
+  
+  \clearpage
+  \section{Group Problems}
+  Work together as a group for the following problems. Once solved, prepare a presentation to explain the problems in an organized manner.
+  \subsection{Problem 1}
+  Solve the following second order differential equations:
+  \begin{enumerate}
+      \item $(D-3)^2y=6e^3x$
+      \item $(D^2+4D+12)y=80\sin{2x}$
+      \item $(D^2+2D+17)y=60e^{-4x}\sin{5x}$
+  \end{enumerate}
+  
+  \subsection{Problem 2}
+  Using the principle of superposition, find the general solution to the following second order differential equation:
+  \begin{equation}
+      \item (D^2+1)y=7+4x\cos{4x}
+  \end{equation}
+  \subsection{Problem 3}
+  Sometimes, second order ODE's can have missing linear terms $x$ and/or $y$. The way you deal with this is by making the substitution $y'=p$ to obtain a simpler form in which other methods for solving ODE's can be used. Use this trick to solve the following equation:
+  
+  \begin{equation}
+      2yy''=y'^2
+  \end{equation}
+  \subsection{Problem 4}
+  It is important to pay attention to equations of the following form:
+  
+ \begin{equation}
+     y''+f(y)=0
+ \end{equation}
+ 
+ These equations arise very frequently in physics applications, such as the motion of a simple pendulum. In order to solve these, one can multiply each term by $y'$ and then integrate the whole expression. This can also be used when considering a particle of mass $m$ moving along the $x$ axis under the action of a force $F(x)$, with a resulting equation of motion:
+ 
+ \begin{equation}
+     m\frac{d^2x}{dt^2}=F(x)
+ \end{equation}
+ 
+Consider the driving force to be $F(x)=\frac{m}{x^3}$. If the mass starts out at rest at a location of $x=1$, what is $v(x)$ and how can you obtain $x(t)$ from it?
+  
+  
+\end{document}
